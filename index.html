@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+   
+    <title>Document</title>
+</head>
+<h1></h1>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand text-uppercase" href="#">Wiseluxe</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#paketit">Paketit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#info">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#FAQ">FAQ</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+        
+      </nav>
+
+      <main>
+        <section class="modal fade" tabindex="-1" id="varaa-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Varaa matka</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="#">
+                    
+
+                    <div class="row g-2">
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type = "email1" class="form-control" placeholder="Sinun email">
+                                <label for="email1"> Sähköpostiosoite 
+                                </label>
+                              </div>
+                            </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <select id="select1" class="form-select">
+                                    <option>Mount Everest, Nepal - 1499€ </option>
+                                    <option>Apenniinit, Italia - 999€</option>
+                                    <option>Karpaatit, Tsekki - 749€</option>
+                                </select>
+                                <label for="select1"> Valitse matka</label>
+                              </div>
+                        </div>
+                  </form>
+                </div>
+            </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Osta nyt</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        <section id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          
+            
+            <div class="carousel-inner" >
+              <div class="carousel-item active c-item">
+                <img src="alps-3010323_1280.jpg" alt="" class="d-block w-100 c-img">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="fs-3 mt-5 text-uppercase">Uskomattomia vuoristoja</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Wiseluxe</h1>
+                    <button class="btn btn-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#varaa-modal">Varaa matka</button>
+                  </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img src="pexels-souvenirpixels-417074.jpg" alt="" class="d-block w-100 c-img">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="fs-3 mt-5 text-uppercase">Lähde matkaan nyt</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">3 vapaata matkaa</h1>
+                    <button class="btn btn-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#varaa-modal">Varaa matka</button>
+                  </div>
+              </div>
+              <div class="carousel-item c-item">
+                <img src="mountains-4261864.jpg" alt="" class="d-block w-100 c-img">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="fs-3 mt-5 text-uppercase">Koe uusia elämyksiä</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Tule yhteiselle matkalle</h1>
+                    <button class="btn btn-light px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#varaa-modal">Varaa matka</button>
+                  </div>
+              </div>
+            </div>
+          
+           
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </section>
+            
+          <section class="overview"> 
+            <div class="container h-100 d-flex align-items-center">
+                <div class="row w-100 text-center fs-4">
+                    <div class="col-xl">
+                        <i class="bi bi-airplane-fill me-2"></i>
+                        3 Upeaa Matka Vaihtoehtoa
+                    </div>
+                    <div class="col-xl">
+                        <i class="bi bi-wallet-fill me-2"></i>
+                        Maksa matka 5% osissa
+                    </div>
+                    <div class="col-xl">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Tuhansia tyytyväisiä asiakkaita
+                    </div> 
+                </div>
+                </div>
+          </section>
+
+          <section id="paketit" class="pt-md-5">
+            <h2 class="text-center my-5">Paketit</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="card">
+                            <img src="tibet-4025999_1280.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Mount Everest, Nepal - 1499€</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+                              <a href="#" class="btn btn-primary">Varaa matka</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="card">
+                            <img src="monte-velino-1973388_1280.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Apenniinit, Italia - 999€</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+                              <a href="#" class="btn btn-primary">Varaa matka</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="card">
+                            <img src="rom8nia-4371133_1280.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Karpaatit, Tsekki - 749€</h5>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+                              <a href="#" class="btn btn-primary">Varaa matka</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <section id="info" class="pt-md-5">
+            <h2 class="text-center my-5"><strong>Mikä on Wiseluxe?</strong></h2>
+            <div class="container">
+           
+                <div class="row">
+                    <div class="col-md-4"><img src="teamwork-3213924_1280.jpg" alt="" class="d-block w-100 c-img"></div>
+                    <div class="col-md-4 text-center"><strong>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+                        <img src="" alt=""></div>
+                        <div class="col-md-4"><img src="adventure-1846096_1280.jpg" alt="" class="d-block w-100 c-img"></div>
+                </div>
+            </div>
+       </section>
+
+
+         <section id="FAQ" class="py-md-5">
+            <h2 class="my-5 text-center">FAQ</h2>
+            <div class="container">
+            <div class="accordion w-75 mx-auto" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Kuinka pitkiä matkat ovat?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Voiko matkan maksaa osamaksulla?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Toimiiko Internet-yhteys vuoristoissa?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+         </section>
+         </main>
+
+      <footer class="bg-dark py-5 mt-5">
+        <div class="container text-light text-center">
+            <p class="display-5 mb-3">Wiseluxe</p>
+            <small class="text-white-50">&copy; Copyright by Wiseluxe. All Rights reserved</small>
+         </div>
+    </footer>
+</body>
+</html>
+   
+   
