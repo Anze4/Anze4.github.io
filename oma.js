@@ -1,4 +1,4 @@
-fetch('tietue.JSON') // Vaitietuehda tähän oma JSON-linkkisi
+fetch('tietue.JSON')  
     .then(res => res.json())
     .then(data => {
         document.getElementById("otsikko").innerText = data.otsikko;
