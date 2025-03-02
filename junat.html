@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junat</title>
+</head>
+<body>
+    <nav>
+        <a href="tehtava.html">Toteutus</a> |
+        <a href="tapahtumat.html">Tapahtumat</a> |
+        <a href="saa.html">Sää</a> |
+        <a href="liikennekamera.html">Liikennekamerat</a> |
+        <a href="junat.html">Junat</a>
+    </nav>
+
+    <h1>Junat Tampereen kautta</h1>
+    <div id="junat"></div>
+
+    <script>
+        fetch('https://rata.digitraffic.fi/api/v1/live-trains/station/TPE?departing_trains=10&include_nonstopping=false')
+        .then(response => response.json())
+        .then(data => {
+            let teksti = "<table border='1'><tr><th>Juna</th><th>Lähtöaika</th><th>Määränpää</th></tr>";
+
+            for (let i = 0; i < data.length; i++) {
+                for (let j = 0; j < data[i].timeTableRows.length; j++) {
+                    if (data[i].timeTableRows[j].stationShortCode == "TPE" && data[i].timeTableRows[j].type == "DEPARTURE") {
+                        let vika = data[i].timeTableRows.length - 1;
+                        let pvm = data[i].timeTableRows[j].scheduledTime;
+                        let aika = pvm.substr(0, 10) + " kello: " + pvm.substr(11, 5);
+                        let maaranpaa = data[i].timeTableRows[vika].stationShortCode;
+                        
+                        teksti += `<tr>
+                                    <td>${data[i].trainType} ${data[i].trainNumber}</td>
+                                    <td>${aika}</td>
+                                    <td>${maaranpaa}</td>
+                                   </tr>`;
+                    }
+                }
+            }
+            teksti += "</table>";
+            document.getElementById("junat").innerHTML = teksti;
+        })
+        .catch(error => document.getElementById("junat").innerHTML = "<p>Tietoa ei voitu hakea</p>");
+    </script>
+</body>
+</html>
